@@ -231,7 +231,7 @@ statuses = st.sidebar.multiselect(
 #    df = df[df["status"].isin(["delivered","pickuped","returning", "delivery_arrived", "performer_found", "performer_draft", "returned", "returned_finish","return_arrived","delivered_finish","failed","pickup_arrived"])]
 
 if (not statuses or statuses == []):
-    filtered_frame = df
+    filtered_frame = df[~df["status"].isin(["estimating_failed", "cancelled", "cancelled_by_taxi", "cancelled_with_payment"])]
 else:
     filtered_frame = df[df['status'].isin(statuses)]
 filtered_frame = filtered_frame.sort_values(by=['client', 'client_id','status_time'],ascending=False,ignore_index=True)
