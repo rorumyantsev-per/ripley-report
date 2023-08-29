@@ -15,8 +15,8 @@ st.set_page_config(layout="wide")
 FILE_BUFFER = io.BytesIO()
 CLAIM_SECRETS = st.secrets["CLAIM_SECRETS"]
 API_URL = st.secrets["API_URL"]
-SECRETS_MAP = {"Ripley Salaverry": 0, "Ripley Chorrillos": 1}
-CLIENTS_MAP = {0: "Ripley Salaverry", 1: "Ripley Chorrillos"}
+SECRETS_MAP = {"Ripley Salaverry": 0, "Ripley Chorrillos": 1, "Ripley Comas": 2}
+CLIENTS_MAP = {0: "Ripley Salaverry", 1: "Ripley Chorrillos", 2: "Ripley Comas"}
 
 statuses = {
     'delivered': {'type': '4. delivered', 'state': 'in progress'},
